@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Multiply every Element in the Array with 75</p>
+    <b>Numbers:</b><p>60,85,72,79,89,36,12,23</p>
+    <p id="product"></p>
+    <script>
+        var numbers = [60,85,72,79,89,36,12,23];
+
+        function myFunction(num){
+            return num * 75;
+        }
+        var newArray = numbers.map(myFunction);
+        document.getElementById("product").innerHTML = newArray
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>The <b>Javascript String() </b>Method</h2>
+        <p>The <b>String</b> method can convert a number to a <b>String</b></p>
+
+        <b>Numbers:</b>
+        <ul>
+            <li>X=70</li>
+            <li>Y=90</li>
+        </ul>
+
+        <p id = "number_result"></p>
+        <p id = "string_result"></p>
+
+        <script>
+            var x = 70;
+            var y = 90;
+
+            document.getElementById("number_result").innerHTML = x + y;
+            document.getElementById("string_result").innerHTML = String(x) + String(y)
+        </script>
+    </body>
+</html>

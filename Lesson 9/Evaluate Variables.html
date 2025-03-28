@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Click the button to Evaluate/Execute Javascript Code/Expression</p>
+    <p>Var x = 10<br>
+       Variable y = 25<br>
+       Variable a = x + y<br>
+       Variable b = x * y<br>
+       Variable c  =y - x <br> 
+</p>
+    <button onclick="myFunction()">Try it</button> 
+    <p id="result"></p>
+    <script>
+        function myFunction(){
+            var x = 10;
+            var y = 25;
+            var a = eval("x + y") + "<br>";
+            var b = eval("x * y") + "<br>";
+            var c = eval("y - x") + "<br>";
+
+            var res = a + b + c;
+            document.getElementById("result").innerHTML = res;
+        }
+    </script>
+</body>
+</html>
