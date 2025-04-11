@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Palindrome App</h2>
+        
+
+        <script>
+            function palindrome (mystring){
+                var input = mystring.replace(/[^A-Z0-9]/ig, "").toUpperCase()
+
+                var reversedInput = input.split('').reverse().join('');
+
+                if(input === reversedInput){
+                    document.write("<div>" + mystring + " is a palindrome." + "<div>")
+                }
+                else{
+                    document.write("<div>" + mystring + " is not a palindrome." + "<div>")
+                }
+            }
+            palindrome("madam")
+            
+        </script>
+    </body>
+</html>
