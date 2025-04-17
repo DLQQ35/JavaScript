@@ -7,7 +7,7 @@
         <h3>Add your To-Do List here!</h3>
         <form id="myForm">
             <input id="myInput" type="text" placeholder="Enter the elements here">
-            <button onclick="myButton()">Add More</button>
+            <button onclick="myButton()">Add</button>
         </form><br>
 
         <h3>To-Do List</h3>
@@ -18,12 +18,7 @@
             var myForm  = document.getElementById("myForm")
             var myInput = document.getElementById("myInput")
             var myItem = document.getElementById("myItem")
-
-
-
-            function myButton() {
-                prompt("Do you want this website to make changes on your device: \n Yes \n No")
-            }
+            
 
             myForm.addEventListener("submit",
                 function(event){
