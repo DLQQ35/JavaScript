@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Calender</title>
+    </head>
+    <body>
+        <div id="MyDateDisplay" onload="showDate()"></div>
+        <div id="MyDayDisplay" onload="showDay()"></div>
+
+        <script>
+            function showDate(){
+                var datee = new Date();
+                var date = datee.getDate();
+                var month = datee.getMonth();
+                var year = datee.getFullYear();
+
+                if(date<10){
+                    date = "0" + date;
+                }
+                if(month<10){
+                    month = "0" + month;
+                }
+                if(year<10){
+                    year = "0" + year;
+                }
+
+                var displayDate = date + "/" + month + "/" + year 
+
+                document.getElementById("MyDateDisplay").innerHTML = displayDate;
+            }
+            showDate() 
+
+            function showDay(){
+                var d = new Date();
+                var day = d.getDay();
+                if(day == 0){
+                    day = "Sunday";  
+                }
+                if(day == 1){
+                    day = "Monday";
+                }
+                if(day == 2){
+                    day = "Tuesday";
+                }
+                if(day == 3){
+                    day = "Wednesday";
+                }
+                if(day == 4){
+                    day = "Thursday";
+                }
+                if(day == 5){
+                    day = "Friday";
+                }
+                if(day == 6){
+                    day = "Saturday"
+                }
+
+                var dayyy = day;
+
+                document.getElementById("MyDayDisplay").innerHTML = dayyy
+            }
+            showDay()
+        </script>
+    </body>
+</html>
