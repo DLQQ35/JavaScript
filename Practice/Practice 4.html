@@ -17,10 +17,36 @@
         #dice:hover {
             cursor: pointer
         }
+        .topnav{
+            overflow: hidden;
+            background-color: black;
+        }
+        .topnav a {
+            float: left;
+            color: blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover{
+            background-color: green;
+            color:red;
+        }
+        .topnav a:active{
+            background-color: yellow;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
+
+    <div class = "topnav">
+        <a class="active" href="#home">Home</a>
+        <a class="active" href="#about us">About Us</a>
+        <a class="active" href="#more">More</a>
+    </div>
     <h3>Click on the Dice &#8595</h3>
     <div id="dice" onclick="stopstart()"></div>
 
@@ -51,3 +77,5 @@
             stopstart()
         }
     </script>
+</body>
+</html>

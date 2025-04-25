@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rolling Dice</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+        }
+
+        #dice {
+            font-size: 320px;
+        }
+
+        #dice:hover {
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Click on the Number &#8595</h3>
+    <div id="dice" onclick="stopstart()"></div>
+
+    <script>
+        var dice;
+
+        var stopped = true;
+        var t;
+
+        function change() {
+            var random = Math.floor(Math.random() * 100)
+            dice.innerHTML = random
+        }
+
+        function stopstart() {
+            if (stopped) {
+                stopped = false;
+                t = setInterval(change, 10);
+            } else {
+                clearInterval(t)
+                stopped = true;
+            }
+        }
+
+        window.onload = function () {
+            dice = document.getElementById("dice");
+            stopstart()
+        }
+    </script>
+
+</body>
+
+</html>
